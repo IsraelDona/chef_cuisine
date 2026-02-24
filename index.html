@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Anago César - Cuisine Africaine Authentique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i> Chef Anago César
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu de navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue chez Chef Anago César</h1>
+            <p>Cuisine Africaine Authentique pour vos Événements & Fêtes</p>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Réserver Maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- À Propos du Chef -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À Propos du Chef</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Chef Anago César</h3>
+                    <p>
+                        Passionné par la cuisine africaine, le Chef Anago César met son talent et son savoir-faire 
+                        au service de vos moments importants. Spécialiste de la cuisine africaine authentique, 
+                        il prépare des mets délicieux qui ravissent vos papilles.
+                    </p>
+                    <h4>Mes Atouts :</h4>
+                    <ul class="atouts">
+                        <li><i class="fas fa-check"></i> Cuisines africaines traditionnelles et modernes</li>
+                        <li><i class="fas fa-check"></i> Ingrédients frais et de qualité</li>
+                        <li><i class="fas fa-check"></i> Créativité et passion culinaire</li>
+                        <li><i class="fas fa-check"></i> Service professionnel et attentif</li>
+                        <li><i class="fas fa-check"></i> Expérience reconnue dans les événements</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-image"></i>
+                        <p>Photo du Chef</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Fêtes & Anniversaires</h3>
+                    <p>Menus personnalisés pour célébrer vos moments spéciaux</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-champagne-glasses"></i>
+                    <h3>Événements Privés</h3>
+                    <p>Catering complet pour vos réceptions et rassemblements</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Repas de Groupe</h3>
+                    <p>Solutions culinaires pour tous types de réunions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Cuisine Africaine</h3>
+                    <p>Spécialités authentiques pour une expérience gustative unique</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>✨ Disponibilités</h3>
+                <p><strong>7 jours sur 7</strong> - Le Chef est disponible pour vous servir tous les jours !</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Nous Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:+2290161006075">+229 016 1006075</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:anagocesar799@gmail.com">anagocesar799@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Disponibilités</h4>
+                            <p>7 jours sur 7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <h3>Envoyer un Message</h3>
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <input type="tel" name="telephone" placeholder="Votre téléphone">
+                    <select name="service" title="Sélectionnez un service" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="anniversaire">Fête / Anniversaire</option>
+                        <option value="evenement">Événement Privé</option>
+                        <option value="repas">Repas de Groupe</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <textarea name="message" placeholder="Détails de votre demande" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Chef Anago César. Tous droits réservés.</p>
+            <p>🇧🇯 Bénin | Cuisines Africaines Authentiques</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu hamburger toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Merci ! Votre message a été envoyé. Le Chef vous contactera bientôt ! 👨‍🍳');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
